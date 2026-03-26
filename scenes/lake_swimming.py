@@ -1,9 +1,9 @@
 """
 =====================================================================
-  Scenes / Dungen Crawl
-  Author: 	Rahul Pinnala
-  Date: 	26.03.2026
-  Contact:	pinnala@uni-bremen.de
+  Scenes / Dungeon Crawl
+  Author:     Rahul Pinnala
+  Date:       26.03.2026
+  Contact:    pinnala@uni-bremen.de
 =====================================================================
 """
 
@@ -14,57 +14,55 @@ from utils import sleep
 
 # ===== Scene =======================================================
 
-@register    # You need to register the entry scene of your arc (and add the module to the scenes.__init__.py file.
+@register
 def example_scene():
-    
-	print(f"\nit is a sunny day and something shiny caught your eye")
-	sleep(2.0) # Add some suspense by adding breaks between text (this would add a 2 seconds break)
-	print(f"\n.....**shiny shiny**", end=' ', flush=True)
-	sleep(2.0)
-	print(f"\nyou realized something is there beyond the very thick high bushes")
-	sleep(2.0)
-	print(f"\nyou go closer towards it squeezing through the bushes", end=' ', flush=True)
-	sleep(2.0)
-	print(f"\nafter passing through enough bushes and you open your eyes")
-	sleep(2.0)
-	print(f"\nyou see a beautiful crystal clear lake infront of you")
-	sleep(2.0)
-	print(f"\ndo you want to swimm ")
 
-    # You can add options for the player to choose from like this:
-	next_scene = choose_option([
-        ('Yes, i will definetly pick it', continuation_scene), # If you want option 1 to lead to a continuation_scene
-        ('No, its probaly not worth anything', None)                # If you want option 2 to exit this scene and continue the game
+    print("\nit is a sunny day and something shiny caught your eye")
+    sleep(2.0)
+    print("\n.....**shiny shiny**", end=' ', flush=True)
+    sleep(2.0)
+    print("\nyou realized something is there beyond the very thick high bushes")
+    sleep(2.0)
+    print("\nyou go closer towards it squeezing through the bushes", end=' ', flush=True)
+    sleep(2.0)
+    print("\nafter passing through enough bushes you open your eyes")
+    sleep(2.0)
+    print("\nyou see a beautiful crystal clear lake in front of you")
+    sleep(2.0)
+    print("\ndo you want to swim?")
+
+    next_scene = choose_option([
+        ('Yes, I will swim', continuation_scene),
+        ('No, it is probably not worth it', None)
     ])
 
     return next_scene
 
+
 # -----------------------------------------------
 
 def continuation_scene():
-    
-    print(f"\nyou remove you outer clothes")
+
+    print("\nyou remove your outer clothes")
     sleep(2.0)
-	print(f"\n you fold them nicely and place on a stone")
-	sleep(2.0)
-	print(f".....*****.......")
-	sleep(2.0)
-    print(f"\nyou carefully walk into the lake")
+    print("\nyou fold them nicely and place them on a stone")
     sleep(2.0)
-	print(f"\.........********swimming********............")
-	sleep(2.0)
-	print(f"\nyou find a stick poking above the water a bit far away")
-	sleep(2.0)
-	print(f"\nit feels like moving")
-	sleep(2.0)
-    print(f"\nwhat would you do ???")
+    print(".....*****.......")
+    sleep(2.0)
+    print("\nyou carefully walk into the lake")
+    sleep(2.0)
+    print(".........********swimming********............")
+    sleep(2.0)
+    print("\nyou find a stick poking above the water a bit far away")
+    sleep(2.0)
+    print("\nit feels like it's moving")
+    sleep(2.0)
+    print("\nwhat would you do???")
     sleep(1.0)
 
-
-    # You can add options for the player to choose from like this:
     next_scene_02 = choose_option([
-        ('I should swimm towards it', continuation_scene_01), # If you want option 1 to lead to a continuation_scene
-        ('Maybe i should just leave the water', None)                # If you want option 2 to exit this scene and continue the game
+        ('I should swim towards it', continuation_scene_01),
+        ('Maybe I should leave the water', None)
     ])
 
     return next_scene_02
@@ -72,102 +70,103 @@ def continuation_scene():
 
 def continuation_scene_01():
 
-    print(f"\nyou swimm slowly towards the stick")
+    print("\nyou swim slowly towards the stick")
     sleep(2.0)
-    print(f".....*****.......")
+    print(".....*****.......")
     sleep(2.0)
-    print(f"\.........********swimming********............")
+    print(".........********swimming********............")
     sleep(2.0)
-    print(f"\nyou first have a look")
+    print("\nyou take a closer look")
     sleep(2.0)
-    print(f"\nwhat would you do ???")
+    print("\nwhat would you do???")
     sleep(1.0)
 
-    # You can add options for the player to choose from like this:
     next_scene_03 = choose_option([
-        ('I should try to pickit', continuation_scene_02_02), # If you want option 1 to lead to a continuation_scene
-        ('I feel something is not right, i should turn back', continuation_scene_02_01))                # If you want option 2 to exit this scene and continue the game
+        ('I should try to pick it', continuation_scene_02_02),
+        ('I should turn back', continuation_scene_02_01)
     ])
 
     return next_scene_03
 
+
 def continuation_scene_02_01():
 
-    print(f"\nyou decided to leave and swimm back")
+    print("\nyou decide to swim back")
     sleep(2.0)
-    print(f".....*****.......")
+    print(".....*****.......")
     sleep(2.0)
-    print(f"\.........********swimming********............")
+    print(".........********swimming********............")
     sleep(2.0)
-    print(f"\nyou feel like something is following you under the water")
+    print("\nyou feel like something is following you underwater")
     sleep(2.0)
-	print(f"\nyou swimm faster and faster")
-	sleep(2.0)
-    print(f"\nyou start you realize something comming up from the water on to surface")
+    print("\nyou swim faster and faster")
     sleep(2.0)
-    print(f"\nbefore you could reach the shore a big spike got embedded into you stomach")
+    print("\nyou realize something is coming up from the water surface")
     sleep(2.0)
-    print(f"\n............we your dead.... try again.....")
+    print("\nbefore you reach the shore, a spike pierces your stomach")
+    sleep(2.0)
+    print("\n............you're dead.... try again.....")
+
+    return None
+
 
 def continuation_scene_02_02():
 
-    print(f"\nyou hold the stick")
+    print("\nyou grab the stick")
     sleep(2.0)
-    print(f"you feel the vibrations")
+    print("\nyou feel vibrations")
     sleep(2.0)
-    print(f"\.........***slight panick***...........")
+    print(".........***slight panic***...........")
     sleep(2.0)
-    print(f"\nyou feel like the stick is pulling you")
+    print("\nyou feel like the stick is pulling you")
     sleep(2.0)
 
+    example_roll = chance_roll(50)
 
-
-    example_roll = chance_roll(50) # You can use a chance roll like this, where 25 is the probability of success
-    
     if example_roll:
-        
-        print(f"\nThings are happening!")
+
+        print("\nThings are happening!")
         sleep(2.0)
-		print("the water started to shake and you refuse to let it go")
-		sleep(2.0)
-		print("you feel like your legs are trembling like things are moving under you feet along with your feet")
-		sleep(2.0)
-		print("........***you geeting draged********...........")
-		sleep(3.0)
-	    print(f"\nrolling dexterity check")
-    	sleep(2.0)
+        print("the water starts to shake and you refuse to let go")
+        sleep(2.0)
+        print("your legs tremble as something moves beneath you")
+        sleep(2.0)
+        print("........***you are getting dragged********...........")
+        sleep(3.0)
 
-		
-		dexterity_roll = chance_roll(50)
-		
-		if dexterity_roll:
-		
-			print(f"\nground started to shake a bit more")
-			sleep(2.0)
-			print(f"\n.....buch***sssshhhhh...shhhhh.......")
+        print("\nrolling dexterity check")
+        sleep(2.0)
+
+        dexterity_roll = chance_roll(50)
+
+        if dexterity_roll:
+
+            print("\nground starts to shake even more")
             sleep(2.0)
-            print(f"\nyou start to fall")
-            sleep(2.0)	
-            print(f"\n*******bhaaammmmm..........")
+            print("\n.....buch***sssshhhhh...shhhhh.......")
+            sleep(2.0)
+            print("\nyou start to fall")
+            sleep(2.0)
+            print("\n*******bhaaammmmm..........")
             sleep(4.0)
-			print(f"\nyou open your eyes and all you see is you are on an island that appeared from the surface")
-			sleep(2.0)
-			print(f"\nyou realize you woke up a sea monster")
-			sleep(2.0)
-			print(f"\n......to be continued......")
+            print("\nyou open your eyes and find yourself on an island")
+            sleep(2.0)
+            print("\nyou realize you woke up a sea monster")
+            sleep(2.0)
+            print("\n......to be continued......")
 
+            return None
 
-        return None
-        # When you are ready to end the scene, return:
-        #   None:  to continue the game
-        #   True:  to win the game
-        #   False: to lose the game
-    
+        else:
+            print("\nyou lose your grip and fall back into the water")
+            sleep(2.0)
+            print("\nsomething moves below... and everything goes dark")
+
+            return None
+
     else:
-		print(f"\nyou left the stick due to lot of pressure ")
-		sleep(2.0)
-		print(f"\nyou are now in the water and see something rising above the water and you start swimming back")
-		
+        print("\nyou let go of the stick due to strong pressure")
+        sleep(2.0)
+        print("\nyou swim back as something rises behind you...")
 
         return None
-
