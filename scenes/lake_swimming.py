@@ -17,14 +17,14 @@ from utils import sleep
 @register    # You need to register the entry scene of your arc (and add the module to the scenes.__init__.py file.
 def example_scene():
     
-    print(f"\nit is a sunny day and something shiny caught your eye")
-    sleep(2.0) # Add some suspense by adding breaks between text (this would add a 2 seconds break)
-    print(f"\n.....**shiny shiny**", end=' ', flush=True)
-    sleep(2.0)
-    print(f"\nyou realized something is there beyond the very thick high bushes")
-    sleep(2.0)
+	print(f"\nit is a sunny day and something shiny caught your eye")
+	sleep(2.0) # Add some suspense by adding breaks between text (this would add a 2 seconds break)
+	print(f"\n.....**shiny shiny**", end=' ', flush=True)
+	sleep(2.0)
+	print(f"\nyou realized something is there beyond the very thick high bushes")
+	sleep(2.0)
 	print(f"\nyou go closer towards it squeezing through the bushes", end=' ', flush=True)
-    sleep(2.0)
+	sleep(2.0)
 	print(f"\nafter passing through enough bushes and you open your eyes")
 	sleep(2.0)
 	print(f"\nyou see a beautiful crystal clear lake infront of you")
@@ -32,7 +32,7 @@ def example_scene():
 	print(f"\ndo you want to swimm ")
 
     # You can add options for the player to choose from like this:
-    next_scene = choose_option([
+	next_scene = choose_option([
         ('Yes, i will definetly pick it', continuation_scene), # If you want option 1 to lead to a continuation_scene
         ('No, its probaly not worth anything', None)                # If you want option 2 to exit this scene and continue the game
     ])
@@ -55,8 +55,8 @@ def continuation_scene():
 	sleep(2.0)
 	print(f"\nyou find a stick poking above the water a bit far away")
 	sleep(2.0)
-    print(f"\nit feels like moving")
-    sleep(2.0)
+	print(f"\nit feels like moving")
+	sleep(2.0)
     print(f"\nwhat would you do ???")
     sleep(1.0)
 
@@ -153,7 +153,7 @@ def continuation_scene_02_02():
 			print(f"\nyou open your eyes and all you see is you are on an island that appeared from the surface")
 			sleep(2.0)
 			print(f"\nyou realize you woke up a sea monster")
-			slepp(2.0)
+			sleep(2.0)
 			print(f"\n......to be continued......")
 
 
