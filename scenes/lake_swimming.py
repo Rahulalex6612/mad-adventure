@@ -85,27 +85,58 @@ def continuation_scene_01():
 
     # You can add options for the player to choose from like this:
     next_scene_03 = choose_option([
-        ('I should try to pickit', continuation_scene_02_01), # If you want option 1 to lead to a continuation_scene
-        ('I feel something is not right, i should turn back', continuation_scene_02_02))                # If you want option 2 to exit this scene and continue the game
+        ('I should try to pickit', continuation_scene_02_02), # If you want option 1 to lead to a continuation_scene
+        ('I feel something is not right, i should turn back', continuation_scene_02_01))                # If you want option 2 to exit this scene and continue the game
     ])
 
-    return next_scene_02
+    return next_scene_03
+
+def continuation_scene_02_01():
+
+    print(f"\nyou decided to leave and swimm back")
+    sleep(2.0)
+    print(f".....*****.......")
+    sleep(2.0)
+    print(f"\.........********swimming********............")
+    sleep(2.0)
+    print(f"\nyou feel like something is following you under the water")
+    sleep(2.0)
+	print(f"\nyou swimm faster and faster")
+	sleep(2.0)
+    print(f"\nyou start you realize something comming up from the water on to surface")
+    sleep(2.0)
+    print(f"\nbefore you could reach the shore a big spike got embedded into you stomach")
+    sleep(2.0)
+    print(f"\n............we your dead.... try again.....")
+
+def continuation_scene_02_02():
+
+    print(f"\nyou hold the stick")
+    sleep(2.0)
+    print(f"you feel the vibrations")
+    sleep(2.0)
+    print(f"\.........***slight panick***...........")
+    sleep(2.0)
+    print(f"\nyou feel like the stick is pulling you")
+    sleep(2.0)
 
 
-	
 
-    example_roll = chance_roll(25) # You can use a chance roll like this, where 25 is the probability of success
+    example_roll = chance_roll(50) # You can use a chance roll like this, where 25 is the probability of success
     
     if example_roll:
         
         print(f"\nThings are happening!")
         sleep(2.0)
-		print("the ground started shake")
+		print("the water started to shake and you refuse to let it go")
 		sleep(2.0)
-		print("you feel like your legs are trembling like things are moving under you feet")
+		print("you feel like your legs are trembling like things are moving under you feet along with your feet")
 		sleep(2.0)
-		print("........***...........")
+		print("........***you geeting draged********...........")
 		sleep(3.0)
+	    print(f"\nrolling dexterity check")
+    	sleep(2.0)
+
 		
 		dexterity_roll = chance_roll(50)
 		
@@ -113,19 +144,17 @@ def continuation_scene_01():
 		
 			print(f"\nground started to shake a bit more")
 			sleep(2.0)
-			print(".....buch***sssshhhhh...shhhhh.......")
+			print(f"\n.....buch***sssshhhhh...shhhhh.......")
             sleep(2.0)
-            print("you start to fall")
+            print(f"\nyou start to fall")
             sleep(2.0)	
-            print("*******bhaaammmmm..........")
+            print(f"\n*******bhaaammmmm..........")
             sleep(4.0)
-			print("you open your eyes and all you see darkness")
+			print(f"\nyou open your eyes and all you see is you are on an island that appeared from the surface")
 			sleep(2.0)
-            print("except a light beam around you like a spot light falling from 40 meters above you")
-            sleep(2.0)
-			print("you realize you fell into a dungen")
+			print(f"\nyou realize you woke up a sea monster")
 			slepp(2.0)
-			print("......to be continued......")
+			print(f"\n......to be continued......")
 
 
         return None
@@ -135,6 +164,10 @@ def continuation_scene_01():
         #   False: to lose the game
     
     else:
+		print(f"\nyou left the stick due to lot of pressure ")
+		sleep(2.0)
+		print(f"\nyou are now in the water and see something rising above the water and you start swimming back")
+		
 
         return None
 
